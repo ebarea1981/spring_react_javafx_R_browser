@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+<BorderPane prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ebb.spring_react_javafx_R.browser.BrowserController">
+    <top>
+        <VBox>
+            <HBox prefHeight="27.0" prefWidth="Infinity" spacing="10">
+                <padding>
+                    <Insets topRightBottomLeft="10"/>
+                </padding>
+                <TextField fx:id="tvUrl" prefWidth="840.0"/>
+                <Button fx:id="btnGo" text="Go" prefWidth="50.0"/>
+            </HBox>
+            <ProgressBar fx:id="progressBar" prefWidth="900.0" visible="false" stylesheets="@progress.css"/>
+        </VBox>
+    </top>
+    <center>
+        <WebView fx:id="webView" prefHeight="550.0" prefWidth="900.0"/>
+    </center>
+</BorderPane>
